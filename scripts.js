@@ -33,10 +33,11 @@ function getTasks() {
             const element = parsed[i];
 
             let contentText = "";
-            for (let j = 0; j < element.contents.length; j++) {
+            const totalContentLength = element.contents.length;
+            for (let j = 0; j < totalContentLength; j++) {
                 const content = element.contents[i];
 
-                contentText = content[0] + ": " + content[1];
+                contentText += content[0] + " : " + content[1] + (totalContentLength - 1 == j ? "" : "\n");
             }
 
             const title = makeText("title", element.title);
@@ -61,7 +62,7 @@ function getTasks() {
             document.getElementById("tugassec").appendChild(container);
             
             console.log(element.title);
-            console.log(element.subject);
+            console.log(element.contents);
             console.log(element.dueDate);
             console.log(element.isComplete);
         }
