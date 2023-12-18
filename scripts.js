@@ -13,19 +13,6 @@ function makeText(classN, text) {
 }
 
 function getTasks() {
-    /*
-    <div class="container">
-        <div class="bullet"></div>
-        <div class="container_fill_1">
-            <div class="title">Title</div>
-            <div class="container_fill_2">
-                <div class="text">text</div>
-                <div class="duedate">due date</div>
-            </div>
-        </div>
-    </div>
-    */
-
     let url = 'https://raw.githubusercontent.com/donnyandrian/sti2task/main/tasks.json';
     fetch(url).then((response) => response.json()).then(function(json) {
         let parsed = JSON.parse(JSON.stringify(json));
@@ -37,7 +24,7 @@ function getTasks() {
             for (let j = 0; j < totalContentLength; j++) {
                 const content = element.contents[i];
 
-                contentText += content[0] + " : " + content[1] + (totalContentLength - 1 == j ? "" : "\n");
+                contentText += content[0] + ": " + content[1] + (totalContentLength - 1 == j ? "" : "\n");
             }
 
             const title = makeText("title", element.title);
