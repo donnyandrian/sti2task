@@ -32,10 +32,15 @@ function getTasks() {
         for (let i = 0; i < parsed.length; i++) {
             const element = parsed[i];
 
-            const content = "Mata kuliah: " + element.subject;
+            let contentText = "";
+            for (let j = 0; j < element.contents.length; j++) {
+                const content = element.contents[i];
+
+                contentText = content[0] + ": " + content[1];
+            }
 
             const title = makeText("title", element.title);
-            const text = makeText("text", content);
+            const text = makeText("text", contentText);
             const duedate = makeText("duedate", element.dueDate);
 
             const container_fill_1 = makeDiv("container_fill_1");

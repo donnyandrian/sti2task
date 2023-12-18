@@ -5,6 +5,7 @@
         "dueDate": "19 Des 23",
         "isComplete": false,
         "contents": [
+            ["Mata kuliah", "Struktur Data"],
             ["Mata kuliah", "Struktur Data"]
         ]
     }
