@@ -1,5 +1,5 @@
 function getTasks() {
-    let url = 'https://github.com/donnyandrian/sti2task/blob/main/tasks.json';
+    let url = 'https://raw.githubusercontent.com/donnyandrian/sti2task/main/tasks.json';
     fetch(url).then((response) => response.json()).then(function(json) {
         let parsed = JSON.parse(JSON.stringify(json));
         for (let i = 0; i < parsed.length; i++) {
