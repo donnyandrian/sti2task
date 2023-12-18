@@ -1,8 +1,11 @@
 [
     {
-        "title": "Tugas Pertemuan 15",
+        "title": "Tugas Pertemuan 14",
         "subject": "Struktur Data",
         "dueDate": "19 Des 23",
-        "isComplete": false
+        "isComplete": false,
+        "contents": [
+            ["Mata kuliah", "Struktur Data"]
+        ]
     }
 ]
